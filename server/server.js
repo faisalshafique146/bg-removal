@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import connectDB from "./config/mongodb.js";
 import userRouter from "./routes/userRoutes.js";
+import imageRouter from "./routes/imagesRoutes.js";
 
 const PORT = process.env.PORT || 4000;
 const app = express();
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 app.use('/api/user', userRouter);
+app.use('/api/image', imageRouter);
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
