@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { assets, plans } from '../assets/assets'
-import { AppContext } from '../context/appContext';
+import { AppContext } from '../context/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@clerk/clerk-react';
 import { toast } from 'react-toastify';
